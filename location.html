@@ -2,29 +2,11 @@
 <html>
 <body>
 
-<h2>Want to know your Geolocation?</h2>
-<p>Click the button to get your coordinates.</p>
+<h2>JavaScript can change the style of elements!</h2>
 
-<button onclick="getLocation()">Try It</button>
+<p id="demo">I love web design</p>
 
-<p id="demo"></p>
-
-<script>
-const x = document.getElementById("demo");
-
-function getLocation() {
-  if (navigator.geolocation) {
-    navigator.geolocation.getCurrentPosition(showPosition);
-  } else { 
-    x.innerHTML = "Geolocation is not supported by this browser.";
-  }
-}
-
-function showPosition(position) {
-  x.innerHTML = "Latitude: " + position.coords.latitude + 
-  "<br>Longitude: " + position.coords.longitude;
-}
-</script>
+<button type="button" onclick="document.getElementById('demo').style.fontSize='35px'">Click Me!</button>
 
 </body>
-</html>
+</html> 
